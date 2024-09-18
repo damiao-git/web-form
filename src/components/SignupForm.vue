@@ -27,10 +27,6 @@
             <button>Create an Account</button>
         </div>
     </form>
-    <p>Email: {{ email }}</p>
-    <p>Password: {{ password }}</p>
-    <p>Role: {{ role }}</p>
-    <p>Terms accepted: {{ terms }}</p>
 </template>
 
 <script>
@@ -64,7 +60,15 @@ export default {
         handleSubmit(){
             // validade password
             this.passwordError = this.password.length > 5 ? '' : 'Password must be at least 6 chars long'
-            
+            if(!this.passwordError){
+                console.log('email: ', this.email);
+                console.log('password: ', this.password);
+                console.log('role: ', this.role);
+                console.log('skills: ', this.skills);
+                console.log('terms: ', this.terms);
+                
+                
+            }
         }
     }
 }
